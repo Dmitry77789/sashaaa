@@ -1,0 +1,565 @@
+/* Применяем box-sizing ко всем элементам для консистентности */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background: #000; /* Установите фоновый цвет вашей страницы */
+    font-family: Arial, sans-serif; /* Установите желаемый шрифт */
+}
+
+.container {
+    
+  }
+  
+
+.content {
+}
+
+
+.section__header {
+    font-family: Arial, sans-serif;
+    color: white;
+    background-image: url('./img/identifi.jpg');
+    background-repeat: no-repeat;
+    position: relative;
+    padding-bottom: 200px; 
+}
+
+
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .logo {
+    width: 150px; /* Устанавливает ширину изображения */
+    height: auto; /* Сохраняет пропорции изображения */
+    margin-left: 200px; /* Отступ справа для кнопки входа */
+  }
+  
+  
+  .language-select {
+    display: flex;
+    align-items: center;
+    margin-right: 200px;
+    position: relative; /* Добавьте это, чтобы позиционировать иконку относительно language-select */
+  }
+
+  .language-select select {
+    -webkit-appearance: none;  /* Для Safari и Chrome */
+    -moz-appearance: none;     /* Для Firefox */
+    appearance: none;          /* Стандартный способ для остальных браузеров */
+
+    /* Добавляем фон с изображением стрелки */
+    background-image: url('./img/arrow.svg');
+    background-repeat: no-repeat;
+    background-position: right 5px center; /* Расположение иконки стрелки */
+    background-size: 25px; /* Размер иконки стрелки */
+    
+}
+  
+  .language-icon {
+    fill: #fff;
+    position: absolute;
+    left: 30px; /* Иконка будет выровнена по левому краю language-select */
+    top: 50%; /* Начальная точка будет на половине высоты language-select */
+    transform: translateY(-50%); /* Сдвигает иконку на половину ее высоты вверх, центрируя ее по вертикали */
+  }
+  
+  .language-select select {
+    padding: 5px 40px; /* Может потребоваться отрегулировать, чтобы текст не перекрывал иконку */
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+
+    font-size: 18px;
+    border: 1px solid #333;
+    cursor: pointer;
+    margin-left: 20px; /* Добавьте отступ слева, чтобы текст в select не был слишком близко к SVG */
+  }
+  
+  .title__main {
+    font-size: 40px;
+    font-weight: bold;
+
+  }
+  
+  .sign-in-btn {
+    padding: 10px 20px;
+    background-color: red; /* Исходный цвет кнопки */
+    color: white;
+    margin-left: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Плавный переход */
+}
+
+.sign-in-btn:hover {
+    background-color: darkred; /* Цвет кнопки при наведении */
+}
+
+  
+  
+  .main-content {
+    text-align: center;
+    padding: 50px 0; /* Определите необходимый отступ сверху и снизу */
+  }
+  
+  /* Исправление для формы подписки */
+  .email-form {
+    margin-top: 20px;
+    display: inline-block; /* Используйте inline-block для лучшей совместимости */
+  }
+  
+  .email-form input[type="email"] {
+    padding: 10px;
+    width: 400px; /* Установите ширину ввода */
+    font-size: 25px;
+    background-color: rgba(0, 0, 0, 0.5); /* Установите желаемый фон */
+    color: white; /* Цвет текста ввода */
+    border: 1px solid #333; /* Установите желаемую границу */
+    margin-right: -4px; /* Удалите, если не нужно */
+  }
+  
+  .get-started-btn {
+    background-color: red;
+    color: white;
+    font-size: 25px;
+    margin-left: 20px;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    display: inline-flex; /* Делает кнопку flex контейнером */
+    align-items: center; /* Центрирует содержимое кнопки по вертикали */
+    font-weight: bold;
+    transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Плавный переход */
+  }
+
+  .get-started-btn:hover {
+    background-color: darkred; /* Цвет кнопки при наведении */
+  }
+
+  .chevron-right-icon {
+    margin-left: 8px; /* Добавляет отступ слева от иконки */
+  }
+
+  /* Стилизация текста внутри input */
+input[type="email"] {
+    color: rgb(207, 204, 204); /* Делает текст, вводимый пользователем, белым */
+    /* Другие стили для input, например, фон, границы и т.д. */
+  }
+  
+  /* Стилизация текста-заполнителя */
+  input[type="email"]::placeholder {
+    color: rgb(207, 204, 204); /* Делает текст, вводимый пользователем, белым */
+    font-weight: bold;
+
+  }
+
+  .paragraph__one {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .paragraph__two {
+    font-size: 20px;
+    padding-top: 15px;
+    font-weight: bold;
+
+  }
+  
+  /* Удаление текста-заполнителя при фокусировке */
+  input[type="email"]:focus::placeholder {
+    color: transparent; /* Делает текст-заполнитель прозрачным при фокусировке */
+  }
+
+  .tv-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 2px solid #ffffff; /* Верхняя горизонтальная линия */
+  border-bottom: 2px solid #ffffff; /* Нижняя горизонтальная линия */
+  padding-left: 150px;
+  padding-right: 150px;
+  padding-bottom: 150px;
+  padding-top: 70px;
+ 
+}
+
+.tv-content {
+    text-align: left;
+    padding-right: 0.375rem;
+    flex-basis: 50%;
+    z-index: 1;
+    width: 70%;
+}
+
+
+.tv-content h2 {
+  color: #ffffff; /* Цвет заголовка */
+  margin-bottom: 20px; /* Отступ между заголовком и параграфом */
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.tv-content p {
+  color: #ffffff; /* Цвет текста */
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 1rem 0 0;
+}
+
+.tv-image {
+    position: relative;
+    display: block;
+
+}
+
+.tv-image img {
+  max-width: 100%; 
+}
+
+.image__video--content {
+    z-index: -1;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    max-width: 73%;
+    max-height: 54%;
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+div {
+    display: block;
+}
+
+.image__video--contenttwo {
+    z-index: -1;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    max-width: 63%;
+    max-height: 47%;
+    position: absolute;
+    top: 34%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+video {
+    display: inline-block;
+    vertical-align: baseline;
+    object-fit: contain;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+.image__content {
+   
+    left: 50%;
+    bottom: 8%;
+    position: absolute;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    margin: 0 auto;
+    background: rgb(0,0,0);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 50%;
+    min-width: 15rem;
+    padding: 0.5rem 0.75rem;
+    border: 2px solid rgba(128,128,128,0.7);
+    box-shadow: 0 0 2em 0 rgb(0,0,0);
+    border-radius: 0.75rem;
+    z-index: 1;
+}
+
+.image__content--item {
+    margin: 0 1rem 0 0;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+
+.image__content--img {
+    height: 5rem;
+}
+
+img {
+    border: 0;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+  
+.image__content--text {
+    text-align: left;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -webkit-flex-shrink: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    margin: 0.3rem 0;
+}
+
+.image__text--one {
+    color: rgb(255,255,255);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.image__text--two {
+    font-size: 0.875rem;
+        font-weight: 400;
+    color: #0071eb;
+}
+
+.image__content--svg {
+    width: 3rem;
+    height: 3rem;
+    outline: 2px solid rgb(0,0,0);
+    outline-offset: -2px;
+    display: block;
+    background: url(/img/k;.gif) center center no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    content: '';
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+
+.accordion__section {
+    border-bottom: 2px solid #ffffff; /* Нижняя горизонтальная линия */
+    padding-bottom: 100px;
+
+}
+
+.faq-header {
+    text-align: center;
+    font-size: 2.5em; /* Установите желаемый размер шрифта */
+    color: white;
+    padding: 20px 0; /* Отступ сверху и снизу */
+    font-weight: bold;
+    padding-top: 80px;
+}
+
+/* Контейнер для аккордеона, который центрирует его и устанавливает максимальную ширину */
+.accordion-container {
+    max-width: 1000px; /* Максимальная ширина аккордеона */
+    margin: auto; /* Автоматические отступы для центрирования */
+    overflow: hidden; /* Убедитесь, что всё содержимое аккордеона видно */
+
+}
+
+.accordion-item {
+    background-color: #333;
+    color: white;
+    margin-bottom: 10px; /* Это создает линию между элементами аккордеона */
+}
+
+.accordion-button {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: background-color 0.6s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion-content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s ease;
+    background-color: #222;
+}
+
+.toggle-icon {
+    font-size: 24px;
+}
+
+.content-link {
+    display: block; /* Сделать ссылку блочным элементом, чтобы она занимала собственную строку */
+    text-decoration: underline; /* Подчеркнуть текст, чтобы показать, что это ссылка */
+    color: white; /* Цвет текста ссылки, если он должен быть белым */
+    margin-top: 1em; /* Добавить пространство сверху, если требуется */
+    /* Другие стили, если необходимо */
+  }
+  
+  .signup-section {
+    background-color: #000; /* Черный фон секции */
+    color: white; /* Белый текст */
+    text-align: center; /* Центрирование текста */
+    padding: 20px; /* Отступы внутри секции */
+  }
+  
+  .signup-prompt {
+    margin-bottom: 20px; /* Отступ перед формой подписки */
+    font-size: 1.25rem; /* Размер шрифта подсказки */
+  }
+  
+  .email-form {
+    display: flex; /* Используется flex для выравнивания формы */
+    justify-content: center; /* Центрирование формы */
+  }
+  
+  .email-input {
+    padding: 10px;
+    font-size: 1rem; /* Размер шрифта внутри input */
+    border: none; /* Убрать стандартные границы */
+    outline: none; /* Убрать фокусный контур */
+    width: 250px; /* Ширина поля ввода */
+    margin-right: -4px; /* Стягиваем кнопку вплотную к input */
+  }
+  
+  .get-started-btn {
+    padding: 10px 20px;
+    background-color: red; /* Красный фон кнопки */
+    color: white; /* Белый текст кнопки */
+    border: none; /* Убрать стандартные границы */
+    cursor: pointer; /* Курсор в виде руки при наведении */
+    font-weight: bold; /* Жирный текст */
+    transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Плавный переход */
+  }
+
+  .get-started-btn:hover {
+    background-color: darkred; /* Цвет кнопки при наведении */
+}
+
+  .site-footer {
+    background-color: #000; /* Черный фон */
+    color: #fff; /* Белый текст */
+    padding: 20px 50px; /* Внутренние отступы */
+    font-size: 0.9rem; /* Размер текста */
+    padding-top: 60px;
+}
+
+.footer-container {
+    max-width: 1000px; /* Максимальная ширина контейнера */
+    margin: auto; /* Центрирование контейнера */
+}
+
+.footer-title {
+    margin-bottom: 20px; /* Отступ заголовка */
+    text-align: left; /* Центрирование заголовка */
+    text-decoration: underline; /* Подчеркивание при наведении */
+    color: #999; /* Серый цвет текста */
+font-size: 24px;
+}
+
+.footer-columns {
+    display: flex; /* Flexbox для колонок */
+    justify-content: space-between; /* Равномерное распределение колонок */
+    flex-wrap: wrap; /* Перенос колонок при уменьшении ширины экрана */
+}
+
+.footer-column {
+    margin-bottom: 20px; /* Отступ между колонками */
+}
+
+.footer-column a {
+    display: block; /* Каждая ссылка на новой строке */
+    color: #fff; /* Белый текст */
+    text-decoration: underline; /* Подчеркивание при наведении */
+    margin-bottom: 10px; /* Отступ между ссылками */
+    color: #999; /* Серый цвет текста */
+    font-size: 18px;
+
+}
+
+
+
+.footer-language {
+    text-align: left; /* Центрирование языкового блока */
+    margin-top: 20px; /* Отступ сверху */
+    position: relative;
+
+}
+
+.footer-language select {
+    padding: 5px 40px; /* Увеличенный отступ справа */
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border: 1px solid #333;
+    cursor: pointer;
+    text-align: left;
+}
+
+.footer-language select {
+    -webkit-appearance: none;  /* Для Safari и Chrome */
+    -moz-appearance: none;     /* Для Firefox */
+    appearance: none;          /* Стандартный способ для остальных браузеров */
+
+    /* Добавляем фон с изображением стрелки */
+    background-image: url('./img/arrow.svg');
+    background-repeat: no-repeat;
+    background-position: right 5px center; /* Расположение иконки стрелки */
+    background-size: 25px; /* Размер иконки стрелки */
+    
+}
+
+/* Для Internet Explorer */
+.footer-language select::-ms-expand {
+    display: none;
+}
+
+
+.language-icon__two {
+    fill: #fff;
+    position: absolute;
+    left: 15px; /* Иконка будет выровнена по левому краю language-select */
+    top: 30%; /* Начальная точка будет на половине высоты language-select */
+    transform: translateY(-50%); /* Сдвигает иконку на половину ее высоты вверх, центрируя ее по вертикали */
+  }
+
+/* Стили для параграфа с названием страны */
+.footer-language p {
+    color: #999; /* Серый цвет текста */
+}
