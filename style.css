@@ -354,7 +354,7 @@ img {
     outline: 2px solid rgb(0,0,0);
     outline-offset: -2px;
     display: block;
-    background: url(/img/k;.gif) center center no-repeat;
+    background: url(./img/k;.gif) center center no-repeat;
     -webkit-background-size: 100%;
     background-size: 100%;
     content: '';
