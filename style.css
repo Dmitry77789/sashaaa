@@ -11,8 +11,8 @@ body, html {
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    background: #000; /* Установите фоновый цвет вашей страницы */
-    font-family: Arial, sans-serif; /* Установите желаемый шрифт */
+    background: #000; 
+    font-family: Arial, sans-serif; 
 }
 
 .container {
@@ -53,7 +53,7 @@ body, html {
     display: flex;
     align-items: center;
     margin-right: 200px;
-    position: relative; /* Добавьте это, чтобы позиционировать иконку относительно language-select */
+    position: relative; 
   }
 
   .language-select select {
@@ -72,13 +72,13 @@ body, html {
   .language-icon {
     fill: #fff;
     position: absolute;
-    left: 30px; /* Иконка будет выровнена по левому краю language-select */
-    top: 50%; /* Начальная точка будет на половине высоты language-select */
-    transform: translateY(-50%); /* Сдвигает иконку на половину ее высоты вверх, центрируя ее по вертикали */
+    left: 30px; 
+    top: 50%; 
+    transform: translateY(-50%); 
   }
   
   .language-select select {
-    padding: 5px 40px; /* Может потребоваться отрегулировать, чтобы текст не перекрывал иконку */
+    padding: 5px 40px; 
     background-color: transparent;
     color: white;
     font-weight: bold;
@@ -86,7 +86,7 @@ body, html {
     font-size: 18px;
     border: 1px solid #333;
     cursor: pointer;
-    margin-left: 20px; /* Добавьте отступ слева, чтобы текст в select не был слишком близко к SVG */
+    margin-left: 20px; 
   }
   
   .title__main {
@@ -97,40 +97,40 @@ body, html {
   
   .sign-in-btn {
     padding: 10px 20px;
-    background-color: red; /* Исходный цвет кнопки */
+    background-color: red; 
     color: white;
     margin-left: 20px;
     border: none;
     cursor: pointer;
     font-weight: bold;
-    transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Плавный переход */
+    transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .sign-in-btn:hover {
-    background-color: darkred; /* Цвет кнопки при наведении */
+    background-color: darkred;
 }
 
   
   
   .main-content {
     text-align: center;
-    padding: 50px 0; /* Определите необходимый отступ сверху и снизу */
+    padding: 50px 0; 
   }
   
-  /* Исправление для формы подписки */
+  
   .email-form {
     margin-top: 20px;
-    display: inline-block; /* Используйте inline-block для лучшей совместимости */
+    display: inline-block; 
   }
   
   .email-form input[type="email"] {
     padding: 10px;
-    width: 400px; /* Установите ширину ввода */
+    width: 400px; 
     font-size: 25px;
-    background-color: rgba(0, 0, 0, 0.5); /* Установите желаемый фон */
+    background-color: rgba(0, 0, 0, 0.5); 
     color: white; /* Цвет текста ввода */
-    border: 1px solid #333; /* Установите желаемую границу */
-    margin-right: -4px; /* Удалите, если не нужно */
+    border: 1px solid #333; 
+    margin-right: -4px; 
   }
   
   .get-started-btn {
@@ -158,7 +158,6 @@ body, html {
   /* Стилизация текста внутри input */
 input[type="email"] {
     color: rgb(207, 204, 204); /* Делает текст, вводимый пользователем, белым */
-    /* Другие стили для input, например, фон, границы и т.д. */
   }
   
   /* Стилизация текста-заполнителя */
@@ -375,7 +374,7 @@ img {
 
 .faq-header {
     text-align: center;
-    font-size: 2.5em; /* Установите желаемый размер шрифта */
+    font-size: 2.5em; 
     color: white;
     padding: 20px 0; /* Отступ сверху и снизу */
     font-weight: bold;
@@ -386,7 +385,7 @@ img {
 .accordion-container {
     max-width: 1000px; /* Максимальная ширина аккордеона */
     margin: auto; /* Автоматические отступы для центрирования */
-    overflow: hidden; /* Убедитесь, что всё содержимое аккордеона видно */
+    overflow: hidden; 
 
 }
 
@@ -424,11 +423,10 @@ img {
 }
 
 .content-link {
-    display: block; /* Сделать ссылку блочным элементом, чтобы она занимала собственную строку */
+    display: block; 
     text-decoration: underline; /* Подчеркнуть текст, чтобы показать, что это ссылка */
-    color: white; /* Цвет текста ссылки, если он должен быть белым */
-    margin-top: 1em; /* Добавить пространство сверху, если требуется */
-    /* Другие стили, если необходимо */
+    color: white; 
+    margin-top: 1em;
   }
   
   .signup-section {
